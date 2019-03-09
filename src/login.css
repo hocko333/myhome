@@ -1,0 +1,36 @@
+.login-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.login-container .log_box {
+  width: 100%;
+  height: 240px;
+  line-height: 240px;
+  background-color: green;
+  color: #fff;
+  text-align: center;
+}
+
+.login-container .login_form {
+  padding: 5px;
+}
+
+.login-container .login_thrid {
+  text-align: center;
+}
+
+.login-container .login_thrid .wechat {
+  color: #21ba45;
+  margin: 30px;
+}
+
+.login-container .login_thrid .qq {
+  color: rgb(0, 130, 255);
+  margin: 30px;
+}
+
