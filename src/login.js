@@ -1,6 +1,8 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import './login.css'
 import { Button, Icon, Form, Divider } from 'semantic-ui-react'
+import axios from 'axios'
 
 class Login extends React.Component {
   constructor(props) {
@@ -20,8 +22,21 @@ class Login extends React.Component {
       password: e.target.value
     })
   }
-  submit = () => {
+  submit = async () => {
+    // 非空验证
+    if (!(this.state.uname && this.state.password)) return
     
+    const url = 'http://47.96.21.88:8086/users/login'
+    const { data: res } = await axios.post(url, {
+      uname: this.state.uname,
+      pwd: this.state.password
+    })
+    // 登录失败
+    if (res.meta.status !== 200) return
+    // 登录成功 存储token 编程式导航
+    window.sessionStorage.setItem('token', res.data.token)
+    const { history } = this.props
+    history.push('/home')
   }
   
   render() {
@@ -64,4 +79,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login
+export default withRouter(Login)
