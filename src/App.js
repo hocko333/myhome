@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Main from './module/main'
 import Login from './login'
 import 'semantic-ui-css/semantic.min.css'
+import CheckAuth from './auth'
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path='/' component={Login} />
-          <Route path='/home' component={Main} />
+          <CheckAuth path='/home' component={Main} />
         </Switch>
       </BrowserRouter>
     )

@@ -1,0 +1,14 @@
+.home-container {
+  padding-top: 40px;
+}
+
+.search_bar {
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}

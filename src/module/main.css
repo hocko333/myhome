@@ -1,0 +1,40 @@
+.main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.main-container .main-menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  line-height: 70px;
+  width: 100%;
+}
+
+.menu_item {
+  height: 60px;
+  line-height: 45px;
+  text-align: center;
+  z-index: 9999;
+  color: #ccc;
+}
+
+.menu_item i {
+  display: block;
+  font-size: 22px;
+}
+
+.menu_item div {
+  height: 15px;
+  line-height: 10px;
+}
+
+.menu_active {
+  color: orange;
+}
